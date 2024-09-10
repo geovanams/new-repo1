@@ -28,6 +28,6 @@ jobs:
     - name: Output Run ID
       run: echo ${{ vars.ENV_VAR }}
     - name: Output Run Number
-      run: echo ${{ github.run_number }}
+      run: echo ${{ github.workspace }}
     - name: Output Run Attempt
       run: echo ${{ github.run_attempt }}
