@@ -22,6 +22,7 @@ jobs:
           echo "This is the $STEP_VARIABLE environment variable"
           
   get-build-number1:
+    environment: teste
     runs-on: ubuntu-latest
     steps:
     - name: Output Run ID
