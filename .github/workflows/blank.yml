@@ -21,7 +21,7 @@ jobs:
           echo "This is the $JOB_VARIABLE environment variable"
           echo "This is the $STEP_VARIABLE environment variable"
           
-  get-build-number:
+  get-build-number1:
     runs-on: ubuntu-latest
     steps:
     - name: Output Run ID
