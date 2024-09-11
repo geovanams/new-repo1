@@ -25,7 +25,7 @@ jobs:
     environment: teste
     runs-on: ubuntu-latest
     steps:
-    - name: Output Run ID
+    - name: Output Run ID1
       run: echo ${{ vars.ENV_VAR }}
     - name: Output Run Number
       run: echo ${{ github.workspace }}
