@@ -3,7 +3,7 @@ name: Branch Created Workflow
 on:
   push:
     branches:
-      - '**'  # This triggers the workflow for all branches
+      - 'testee'  # This triggers the workflow for all branches
 
 jobs:
   branch_created:
