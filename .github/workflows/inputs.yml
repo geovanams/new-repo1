@@ -26,7 +26,7 @@ on:
         description: 'Select the job to run'
         required: true
         default: 'build'
-        type: job
+        type: jobs
 
 jobs:
   print-tag:
