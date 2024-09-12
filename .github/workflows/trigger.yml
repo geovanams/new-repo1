@@ -1,9 +1,9 @@
 name: Branch Created Workflow
 
 on:
-  create:
+  push:
     branches:
-      - 'release/*'  # This triggers the workflow for all branches
+      - 'oie/*'  # This triggers the workflow for all branches
 
 jobs:
   branch_created:
