@@ -1,0 +1,16 @@
+name: Branch Created Workflow
+
+on:
+  create:
+    branches:
+      - 'release/*'  # This triggers the workflow for all branches
+
+jobs:
+  branch_created:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Display branch information
+        run: echo "A new branch named ${{ github.ref }} has been created.
