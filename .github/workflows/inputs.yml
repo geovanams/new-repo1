@@ -30,14 +30,15 @@ on:
 
 jobs:
   print-tag:
+    if: ${{inputs.environment == teste}}
+    environment: teste
     runs-on: ubuntu-latest
-    if:  ${{ inputs.print_tags }} 
     steps:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ inputs.tags }} 
   print-tag1:
     runs-on: ubuntu-latest
-    if:  ${{ inputs.print_tags }} 
+    if:  ${{ inputs.environment == teste1 }} 
     steps:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ inputs.tags }} 
