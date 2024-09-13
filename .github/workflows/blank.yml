@@ -9,6 +9,8 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
+      env:
+        type: environment
 
 env:
   WORKFLOW_VARIABLE: WORKFLOW
@@ -34,8 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Output Run ID1
-      run: echo ${{ vars.ENV_VAR }}
+      run: "echo ${{ vars.ENV_VAR }}"
     - name: Output Run Number
-      run: echo ${{ github.workspace }}
+      run: echo ${{ vars.ENV_VAR }}
     - name: Output Run Attempt
       run: echo ${{ github.run_attempt }}
