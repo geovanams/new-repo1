@@ -32,7 +32,7 @@ on:
 
 jobs:
   print-tag:
-    if: ${{inputs.environment == 'teste'}}
+    #if: ${{inputs.environment == 'teste'}}
     environment: teste
     runs-on: ubuntu-latest
     env:
