@@ -35,9 +35,11 @@ jobs:
     if: ${{inputs.environment == 'teste'}}
     environment: teste
     runs-on: ubuntu-latest
+    env:
+      oi: ${{ inputs.environment == 'teste' && 'Homologacao' || inputs.ambiente == 'teste1' && 'Piloto' || inputs.ambiente == 'teste2' && 'Release' || 'Default' }}
     steps:
       - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ inputs.tags }} 
+        run: echo  The tags are ${{ env.oi }} 
   print-tag1:
     runs-on: ubuntu-latest
     if:  ${{ inputs.environment == 'teste1' }} 
