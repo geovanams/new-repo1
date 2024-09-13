@@ -36,7 +36,7 @@ jobs:
     environment: teste
     runs-on: ubuntu-latest
     env:
-      oi: ${{ inputs.environment == 'teste' && 'Homologacao' || inputs.ambiente == 'teste1' && 'Piloto' || inputs.ambiente == 'teste2' && 'Release' || 'Default' }}
+      oi: ${{ inputs.environment == 'teste' && 'Homologacao' || inputs.ambiente == 'teste1' && 'Piloto' || inputs.ambiente == 'teste2' && 'Release' }}
     steps:
       - name: Print the input tag to STDOUT
         run: echo  The tags are ${{ env.oi }} 
