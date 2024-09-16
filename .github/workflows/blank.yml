@@ -38,6 +38,6 @@ jobs:
     - name: Output Run ID1
       run: "echo ${{ vars.ENV_VAR }}"
     - name: Output Run Number
-      run: echo ${{ secrets.ENV_SE }}
+      run: echo ${{ secrets.REPO_SE }}
     - name: Output Run Attempt
       run: echo ${{ github.run_attempt }}
